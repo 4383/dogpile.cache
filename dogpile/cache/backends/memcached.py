@@ -176,8 +176,7 @@ class GenericMemcachedBackend(CacheBackend):
         return [NO_VALUE if key not in values else values[key] for key in keys]
 
     def set(self, key, value):
-        print("oooooooooooooooooooooooooo")
-        print("oooooooooooooooooooooooooo")
+        print("dogpile set value with key {}".format(key))
         self.client.set(key, value, **self.set_arguments)
 
     def set_multi(self, mapping):
