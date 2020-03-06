@@ -177,6 +177,7 @@ class GenericMemcachedBackend(CacheBackend):
 
     def set(self, key, value):
         print("oooooooooooooooooooooooooo")
+        print("oooooooooooooooooooooooooo")
         self.client.set(key, value, **self.set_arguments)
 
     def set_multi(self, mapping):
