@@ -176,6 +176,7 @@ class GenericMemcachedBackend(CacheBackend):
         return [NO_VALUE if key not in values else values[key] for key in keys]
 
     def set(self, key, value):
+        print("oooooooooooooooooooooo")
         self.client.set(key, value, **self.set_arguments)
 
     def set_multi(self, mapping):
